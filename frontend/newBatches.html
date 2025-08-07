@@ -1,0 +1,205 @@
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Container (if needed) */
+.batch-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.batch-container h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Subtext */
+.batch-container p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Table Styling */
+.batch-container table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header Row */
+.batch-container th {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Data Rows */
+.batch-container td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row color */
+.batch-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.batch-container tr:hover {
+  background-color: #e6f2ff;
+}
+
+/* Link Styling */
+.batch-container a {
+  color: #0156ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.batch-container a:hover {
+  text-decoration: underline;
+}
+   /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .modal-content h3 {
+      margin-bottom: 20px;
+      color: #0156ff;
+      text-align: center;
+    }
+
+    .modal-content input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .modal-content button {
+      width: 100%;
+      padding: 10px;
+      background: #0156ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .close:hover {
+      color: red;
+    }
+    .meeting-link {
+      color: #0156ff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    </style>
+ </head>
+<body>
+<div class="batch-container">
+  <h1>New Batch Timetable</h1>
+  <p>Explore new and trending free online courses.</p>
+  <table>
+    <tr>
+      <th>s no</th><th>Course Name</th><th>Faculty</th><th>Date</th><th>Time</th><th>Meeting Link</th>
+    </tr>
+    <tr><td>1</td><td>Aws And Devops</td><td>Mr. Manikanta</td><td>10 Jul 2025</td><td>6:31 PM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>2</td><td>Azure DevOps</td><td>Mr. Pavan</td><td>10 Jul 2025</td><td>9:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>3</td><td>Python</td><td>Mr. K V Rao</td><td>09 Jul 2025</td><td>11:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>4</td><td>Python Full Stack</td><td>Mr. Chakravarthi</td><td>09 Jul 2025</td><td>11:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>5</td><td>Data Analytics</td><td>Mr.Harish</td><td>09 Jul 2025</td><td>10:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>6</td><td>Data Science</td><td>Mr.Rahul</td><td>07 Jul 2025</td><td>11:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>7</td><td>Power BI</td><td>Mr. Sarath</td><td>06 Jul 2025</td><td>12:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>8</td><td>Java Full Stack</td><td>Mr. K V Rao</td><td>09 Jul 2025</td><td>1:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>9</td><td>Gen AI</td><td>Mr.Rao</td><td>10 Jul 2025</td><td>11:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>10</td><td>Linux</td><td>Mr. Rao</td><td>12 Jul 2025</td><td>3:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+    <tr><td>11</td><td>tableau</td><td>Mr. Naveen</td><td>14 Jul 2025</td><td>5:00 AM</td><td><a class="meeting-link" onclick="openForm()">Click here</a></td></tr>
+  </table>
+</div>
+  
+  <!-- Modal -->
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h3>Register for the Batch</h3>
+      <form onsubmit="submitEnrollForm(event)">
+       <input type="text" id="enrollName" placeholder="Full Name" required>
+       <input type="email" id="enrollEmail" placeholder="Email Address" required>
+       <input type="tel" id="enrollMobile" placeholder="Mobile Number" required>
+       <button type="submit" class="submit-btn">Register</button>
+    </form>
+    </div>
+  </div>
+
+    <script>
+       function openForm() {
+      document.getElementById("formModal").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("formModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("formModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+     function submitEnrollForm() {
+    var name = document.getElementById("enrollName").value.trim();
+    var mobile = document.getElementById("enrollMobile").value.trim();
+    var email = document.getElementById("enrollEmail").value.trim();
+
+    if (name === "" || mobile === "" || email === "") {
+      alert("Please fill in all fields.");
+    } else {
+      alert(" Registration successfully!");
+      closeEnrollModal();
+    }
+  }
+  </script>
+</body>
+</html>
