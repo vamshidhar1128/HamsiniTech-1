@@ -1,13 +1,2 @@
-FROM amazonlinux
-
-# Install Apache
-RUN yum install -y nginx
-
-# Copy website content
-COPY . /usr/share/nginx/html/
-
-# Expose HTTP port
-EXPOSE 80
-
-# Start Apache in the foreground (important for Docker!)
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
